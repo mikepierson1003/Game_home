@@ -115,7 +115,7 @@ public class Game {
 		} while(!command.equals("x"));
 		
 		input.close();
-		//commit test 2
-	}	
+		//commit test 3
+	}
 	
 }
