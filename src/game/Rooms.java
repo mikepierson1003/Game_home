@@ -41,6 +41,10 @@ public class Rooms {
 		npc.put(name,  i);
 	}
 	
+	public NPC getNPC(String name) {
+		return npc.get(name);
+	}
+	
 	public String toString() {
 		return Game.descriptions.get(name);
 	}

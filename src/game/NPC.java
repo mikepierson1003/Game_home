@@ -39,4 +39,8 @@ public class NPC {
 		Game.input.nextLine(); // Flush input buffer
 		response(option);
 	}
+		
+	public void give(Item i) {
+		Game.print(name+"doesn't want that.");
+	}
 }

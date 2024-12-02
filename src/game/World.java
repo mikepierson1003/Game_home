@@ -52,8 +52,8 @@ public class World {
 		Lablower.setItem("combinationsafe", combinationsafe); // adds combination safe code to lower lab room
 		NPC puppy = new NPC("puppy", "It's a puppy.");
 		Lablower.setNPC("puppy", puppy);
-		NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
-		Lablower.setNPC("ai", ai);
+		//NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
+		//Lablower.setNPC("ai", ai);
 		
 		Labupper.addExit(Lablower, 'd');
 		Labupper.addExit(Kitchen, 'n');
@@ -64,7 +64,7 @@ public class World {
 		Armory.addExit(Labupper, 'e');
 		Item gun = new Item("gun", "It's a gun.");
 		Armory.setItem("gun", gun);
-		Armory.setLock(true); // locks armory?
+		Armory.setLock(true); // locks armory
 		
 		Caf.addExit(Lablower, 's');
 		Caf.addExit(Kitchen, 'u');

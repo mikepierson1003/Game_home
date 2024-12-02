@@ -38,6 +38,7 @@ public class Game {
 	public static Rooms currentRoom;
 	public static Scanner input = new Scanner(System.in);
 	
+	@SuppressWarnings("null")  // npc.talk(); on line 115 wanted this. why?
 	public static void runGame() {
 		currentRoom = World.buildWorld();
 		readDescription();
@@ -59,7 +60,7 @@ public class Game {
 				Rooms nextRoom = currentRoom.getExit(command.charAt(0));
 				if (nextRoom == null)
 					System.out.println("You can't go that way.");
-//				else if (nextRoom == rooms.ocean)  // how to see if the next room is the ocean room?
+//				else if (nextRoom == )  // how to see if the next room is the ocean room?
 //					System.out.println("You died.");
 //					System.exit(0);
 				else if (nextRoom.getLock() == true)
@@ -108,6 +109,14 @@ public class Game {
 				else
 					System.out.println("You opened the "+i3.getName(command)+".");
 				break;
+			case "talk":
+				NPC npc = currentRoom.getNPC(words[1]);
+				if(npc == null)
+					System.out.println("There is no one to talk to.");
+				else
+					System.out.println("You are talking to the "+npc.getName()+".");
+					npc.getResponse(words);
+				break;
 			default:
 				System.out.println("I don't know what that means.");
 			}
@@ -115,7 +124,7 @@ public class Game {
 		} while(!command.equals("x"));
 		
 		input.close();
-		//commit test 4
+		
 	}
 	
 }
