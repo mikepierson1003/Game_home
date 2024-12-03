@@ -124,7 +124,7 @@ public class Game {
 		} while(!command.equals("x"));
 		
 		input.close();
-		
+		//test 1
 	}
 	
 }
