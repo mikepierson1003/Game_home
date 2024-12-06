@@ -1,6 +1,8 @@
 package game;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
 
 		private String name; // Item's name
 		private String desc; // Description of the item

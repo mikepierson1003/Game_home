@@ -52,8 +52,8 @@ public class World {
 		Lablower.setItem("combinationsafe", combinationsafe); // adds combination safe code to lower lab room
 		NPC puppy = new NPC("puppy", "It's a puppy.");
 		Lablower.setNPC("puppy", puppy);
-		//NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
-		//Lablower.setNPC("ai", ai);
+		NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
+		Lablower.setNPC("ai", ai);
 		
 		Labupper.addExit(Lablower, 'd');
 		Labupper.addExit(Kitchen, 'n');

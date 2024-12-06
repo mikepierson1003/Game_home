@@ -4,9 +4,6 @@ public class Ai extends NPC{
 	public Ai() {
 		super("Ai", "The ship appears to have its own ai. What did it do?");
 		}
-	
-	
-	
 	@Override
 	public void talk() {
 		say("Unauthorized personell detected.");
@@ -16,7 +13,6 @@ public class Ai extends NPC{
 		};
 		getResponse(options);
 	}
-	
 	@Override
 	public void response(int option) {
 		switch(option) {
