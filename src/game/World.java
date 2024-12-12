@@ -65,6 +65,8 @@ public class World {
 		Item gun = new Item("gun", "It's a gun.");
 		Armory.setItem("gun", gun);
 		Armory.setLock(true); // locks armory
+		Item gunpowder = new Item("gunpowder", "It's gun powder.");
+		Armory.setItem("gunpower", gunpowder);
 		
 		Caf.addExit(Lablower, 's');
 		Caf.addExit(Kitchen, 'u');
