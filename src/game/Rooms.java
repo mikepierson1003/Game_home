@@ -20,7 +20,7 @@ public class Rooms implements Serializable {
 	//Rooms constructor
 	public Rooms(String name) {
 		this.name = name;
-		Game.save.put(name, name); // check this
+		Game.save.put(name, this); // check this
 	}
 	
 	public String getDescription() {

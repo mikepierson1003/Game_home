@@ -75,24 +75,68 @@ public class Game {
 				break;
 			case "look":
 				Item i1 = currentRoom.getItem(words[1]);
-				if(i1 == null)
-					Game.print("There is nothing to look at.");
-				else
+				//I need an Item variable to set equal to the Item found in the inventory
+				//so I can check for it in the later part of the else if statement
+				
+				boolean i1_i = inventory.contains(words[1]);
+				if(currentRoom.getItem(words[1]) == i1) {
 					Game.print("You are looking at the "+words[1]+".");
+					Game.print(i1.getDesc(words[1]));
+				} else if(i1_i == true) {
+					
+					
+					for(Item it : inventory)
+						if(it == i1) { //Need Item Inventory Variable in this if statement
+							Game.print("You are looking at the "+words[1]+".");
+							Game.print(i1.getDesc(words[1]));
+							break;
+						}
+					
+				} else
+					Game.print("There is nothing to look at.");
 				break;
+				
+				
+				
+/*				
+				Item i1 = currentRoom.getItem(words[1]);
+				boolean i1_i = inventory.contains(words[1]);
+				if(i1 null)
+					Game.print("There is nothing to look at.");
+				else if(currentRoom.getItem(words[1]) == i1) {
+					Game.print("You are looking at the "+words[1]+".");
+					Game.print(i1.getDesc(words[1]));
+				} else if(i1_i == true) {
+					Game.print("You are looking at the "+words[1]+".");
+					Game.print(i1.getDesc(words[1]));
+					
+					
+				for(Item it : inventory)
+					if(it == i1) {
+						Game.print("You are looking at the "+words[1]+".");
+						Game.print(i1.getDesc(words[1]));
+						break;
+					}
+*/				
+				
+				
 			case "use":
 				Item i2 = currentRoom.getItem(words[1]);
 				if(i2 == null)
 					Game.print("You cant use that here.");
-				else
+				else {
 					Game.print("You used the "+i2.getName(command)+".");
+					i2.use(command);
+				}	
 				break;
 			case "open":
 				Item i3 = currentRoom.getItem(words[1]);
 				if(i3 == null)
 					Game.print("You cant open this.");
-				else
+				else {
 					Game.print("You opened the "+i3.getName(command)+".");
+					i3.open(command);
+				}
 				break;
 			case "talk":
 				NPC npc = currentRoom.getNPC(words[1]);
@@ -117,7 +161,7 @@ public class Game {
 
 	
 	
-	public static HashMap<String, String> save = new HashMap<String, String>();
+	public static HashMap<String, Rooms> save = new HashMap<String, Rooms>();
 	
 	public static void saveGame(String fileName) {
 		File f = new File(fileName);

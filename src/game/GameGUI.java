@@ -42,6 +42,7 @@ public class GameGUI extends JFrame implements ActionListener {
 		
 		//I want to add a way to have the button respond to the Enter key
 		
+		//GUI also doesn't scroll down when the text reaches the bottom of the window
 		
 		
 		

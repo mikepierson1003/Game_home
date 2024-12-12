@@ -59,12 +59,15 @@ public class World {
 		Labupper.addExit(Kitchen, 'n');
 		Labupper.addExit(Armory, 'w');
 		Item flask = new Item("flask", "It's a flask filled with an unknown liquid.");
-		Labupper.setItem("flask", flask);
+		Labupper.setItem("flask", flask);// used for end game
 		
 		Armory.addExit(Labupper, 'e');
 		Item gun = new Item("gun", "It's a gun.");
 		Armory.setItem("gun", gun);
 		Armory.setLock(true); // locks armory
+		
+		
+		
 		
 		Caf.addExit(Lablower, 's');
 		Caf.addExit(Kitchen, 'u');
@@ -93,7 +96,7 @@ public class World {
 		Safe safe = new Safe("Safe", "It's a safe.");
 		Captain.setItem("Safe", safe); //adds safe to captains room
 		Item armorykey = new Item("armory key", "It's the key to the armory.");
-		Captain.setItem("armory key", armorykey); //Armory Key
+		Captain.setItem("armorykey", armorykey); //Armory Key
 		
 		Observatoryupper.addExit(Sleepingupper, 's');
 		Observatoryupper.addExit(Observatorylower, 'd');

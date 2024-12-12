@@ -10,6 +10,5 @@ public class nap extends Thread {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 }
