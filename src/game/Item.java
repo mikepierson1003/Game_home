@@ -12,11 +12,11 @@ public class Item implements Serializable {
 			desc = d;
 		}
 		
-		public String getName(String n) {
+		public String getName() {
 			return name;
 		}
 		
-		public String getDesc(String d) {
+		public String getDesc() {
 			return desc;
 		}
 		

@@ -47,6 +47,10 @@ public class Rooms implements Serializable {
 		return npc.get(name);
 	}
 	
+	public void removeNPC(String name) {
+		npc.remove(name);
+	}
+	
 	public String toString() {
 		return Game.descriptions.get(name);
 	}

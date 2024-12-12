@@ -22,11 +22,10 @@ public class World {
 		Rooms Captain = new Rooms("Captains Quarters");
 		Rooms Armory = new Rooms("Armory");
 
-		
 		Entrance.addExit(Decontamination, 'd');
 		Entrance.addExit(Ocean, 'u');
-		NPC puppy = new NPC("puppy", "It's a puppy.");
-		Lablower.setNPC("puppy", puppy);
+		Puppy puppy = new Puppy();
+		Entrance.setNPC("puppy", puppy);
 		
 		Decontamination.addExit(Entrance, 'u');
 		Decontamination.addExit(Radar, 'd');
@@ -52,7 +51,7 @@ public class World {
 		Lablower.addExit(Labupper, 'u');
 		Combination combinationsafe = new Combination("combination", "It's a combination for a safe");
 		Lablower.setItem("combinationsafe", combinationsafe); // adds combination safe code to lower lab room
-		NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
+		Ai ai = new Ai();
 		Lablower.setNPC("ai", ai);
 		
 		Labupper.addExit(Lablower, 'd');
