@@ -25,6 +25,8 @@ public class World {
 		
 		Entrance.addExit(Decontamination, 'd');
 		Entrance.addExit(Ocean, 'u');
+		NPC puppy = new NPC("puppy", "It's a puppy.");
+		Lablower.setNPC("puppy", puppy);
 		
 		Decontamination.addExit(Entrance, 'u');
 		Decontamination.addExit(Radar, 'd');
@@ -50,8 +52,6 @@ public class World {
 		Lablower.addExit(Labupper, 'u');
 		Combination combinationsafe = new Combination("combination", "It's a combination for a safe");
 		Lablower.setItem("combinationsafe", combinationsafe); // adds combination safe code to lower lab room
-		NPC puppy = new NPC("puppy", "It's a puppy.");
-		Lablower.setNPC("puppy", puppy);
 		NPC ai = new NPC("ai voice", "It's the voice of the ships ai");
 		Lablower.setNPC("ai", ai);
 		
@@ -65,9 +65,6 @@ public class World {
 		Item gun = new Item("gun", "It's a gun.");
 		Armory.setItem("gun", gun);
 		Armory.setLock(true); // locks armory
-		
-		
-		
 		
 		Caf.addExit(Lablower, 's');
 		Caf.addExit(Kitchen, 'u');
